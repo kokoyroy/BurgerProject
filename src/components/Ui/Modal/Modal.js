@@ -6,17 +6,18 @@ import Styles from './Modal.module.css';
 const modal = (props) => {
     return (
         <Mox>
-        <Backdrop 
-        cancel ={props.cancelOrder}
-        show={props.modalShow} />
-        <div className={Styles.Modal}
-            style={{
-                transform: props.modalShow ? 'translateY(0)' : 'translateY(-100vh)',
-                opacity: props.modalShow ? '1' : '0'
-            }}
-        >
-            {props.children}
-        </div>
+            <Backdrop
+                cancel={props.cancelOrder}
+                show={props.modalShow}
+            />
+            <div className={Styles.Modal}
+                style={{
+                    transform: props.modalShow ? 'translateY(0)' : 'translateY(-100vh)',
+                    opacity: props.modalShow ? '1' : '0'
+                }}
+            >
+                {props.children}
+            </div>
         </Mox>
     )
 }
