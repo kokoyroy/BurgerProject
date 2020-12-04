@@ -20,7 +20,7 @@ class BurgerBuilder extends Component {
     state = {
         ingridients: null,
         totalPrice: 0,
-        purchasable: true,
+        purchasable: false,
         purchasing: false,
         loading: false,
         error: null
