@@ -1,4 +1,4 @@
-import { checkPropTypes } from 'prop-types';
+// import { checkPropTypes } from 'prop-types';
 import React from 'react';
 import Styles from './DrawerToggler.module.css';
 

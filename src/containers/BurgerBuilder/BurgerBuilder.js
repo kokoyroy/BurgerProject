@@ -22,7 +22,8 @@ class BurgerBuilder extends Component {
         totalPrice: 0,
         purchasable: true,
         purchasing: false,
-        loading: false
+        loading: false,
+        error: null
     }
 
     componentDidMount() {
@@ -36,7 +37,10 @@ class BurgerBuilder extends Component {
                 }, 2000)
 
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err)
+                this.setState({ error: true })
+            })
     }
 
 
@@ -130,13 +134,13 @@ class BurgerBuilder extends Component {
         for (const key in disabledInfo) {
             disabledInfo[key] = disabledInfo[key] === 0;
         }
-        
-        
-        
+
+
+
 
         //initialising order and burger
         let orderSum = <Spinner />;
-        let burger = <Spinner />;
+        let burger = this.state.error ? <p>there was an error </p> : <Spinner />;
         //checking if ingridiens !null
         if (this.state.loading) {
             orderSum = <Spinner />

@@ -8,7 +8,7 @@ const logo = (props) => {
     return (
 
         <div className={Styles.Logo} >
-            <img src={Logo} />
+            <img src={Logo} alt='logo'/>
         </div>
 
 
